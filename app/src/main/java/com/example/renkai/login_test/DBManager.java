@@ -7,9 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by renkai on 17/7/8.
- */
+
 
 public class DBManager {
     private DBHelper dbHelper;

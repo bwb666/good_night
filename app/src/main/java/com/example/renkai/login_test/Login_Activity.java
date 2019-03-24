@@ -88,11 +88,11 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
                 return false;
             }
         });
-        text_msg = (TextView) findViewById(R.id.text_msg);
+//        text_msg = (TextView) findViewById(R.id.text_msg);
         btn_login = (Button) findViewById(R.id.btn_login);
         btn_register = (Button) findViewById(R.id.btn_register);
         openpwd = (ImageButton) findViewById(R.id.btn_openpwd);
-        text_msg.setOnClickListener(this);
+//        text_msg.setOnClickListener(this);
         btn_login.setOnClickListener(this);
         btn_register.setOnClickListener(this);
         openpwd.setOnClickListener(this);
@@ -130,10 +130,10 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
 //                if(Remenberpass.isChecked()){
 //
 //                    }
-            case R.id.text_msg:
-                Intent i = new Intent(Login_Activity.this, ForgotInfo_activity.class);
-                startActivity(i);
-                break;
+//            case R.id.text_msg:
+//                Intent i = new Intent(Login_Activity.this, ForgotInfo_activity.class);
+//                startActivity(i);
+//                break;
         }
     }
 

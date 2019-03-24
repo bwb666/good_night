@@ -29,12 +29,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/my_item"
             android:textSize="20dp"
             android:textColor="@color/white"
-            android:text="  查看我的闹钟"
+            android:text="  Go to my clock"
             android:gravity="center_vertical"/>
     </LinearLayout>
 
@@ -43,12 +43,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/my_item"
             android:textSize="20dp"
             android:textColor="@color/white"
-            android:text="  查看我的睡眠统计"
+            android:text="  Go to sleep time statistics"
             android:gravity="center_vertical"/>
     </LinearLayout>
 </LinearLayout>

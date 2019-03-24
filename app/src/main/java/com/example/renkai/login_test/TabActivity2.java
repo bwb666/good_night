@@ -101,13 +101,13 @@ public class TabActivity2 extends AppCompatActivity {
         start_sleep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SimpleDateFormat format=new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+                SimpleDateFormat format=new SimpleDateFormat("yyyy/MM/dd HH:mm");
                 sleep_time=format.format(new Date());
                 //把入睡时间输入数据库
 //                start_sleep_time(sleep_time);
                 getTimeMillis(sleep_time);
-                Toast.makeText(TabActivity2.this, sleep_time, Toast.LENGTH_SHORT).show();
-                gotoLayout2();//在哪里哦
+               // Toast.makeText(TabActivity2.this, sleep_time, Toast.LENGTH_SHORT).show();
+                gotoLayout2();
             }
         });
     }
@@ -119,15 +119,16 @@ public class TabActivity2 extends AppCompatActivity {
         get_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SimpleDateFormat format=new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+                SimpleDateFormat format=new SimpleDateFormat("yyyy/MM/dd HH:mm");
                 getup_time=format.format(new Date());
                 getTimeMillis(getup_time);
-                Toast.makeText(TabActivity2.this,getup_time, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(TabActivity2.this,getup_time, Toast.LENGTH_SHORT).show();
                 getTimeExpend(sleep_time, getup_time);
+                Toast.makeText(TabActivity2.this,getTimeExpend(sleep_time, getup_time), Toast.LENGTH_SHORT).show();
                 //把睡眠时长输入数据库
 //                during_sleep_time(getTimeExpend(sleep_time, getup_time));
                 sleep_Info(sleep_time, getTimeExpend(sleep_time, getup_time));
-                Toast.makeText(TabActivity2.this,getTimeExpend(sleep_time, getup_time), Toast.LENGTH_SHORT).show();
+
                 gotoLayout1();
             }
         });
@@ -140,10 +141,10 @@ public class TabActivity2 extends AppCompatActivity {
         start_sleep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SimpleDateFormat format=new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+                SimpleDateFormat format=new SimpleDateFormat("yyyy/MM/dd HH:mm");
                 sleep_time=format.format(new Date());
                 getTimeMillis(sleep_time);
-                Toast.makeText(TabActivity2.this, sleep_time, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(TabActivity2.this, sleep_time, Toast.LENGTH_SHORT).show();
                 gotoLayout2();
             }
         });
@@ -162,7 +163,7 @@ public class TabActivity2 extends AppCompatActivity {
             Log.i("debug", "睡觉信息已插入数据库");
         }
         else {Log.i("debug","睡眠时间不足0.5小时");
-        Toast.makeText(TabActivity2.this, "睡眠时间不足0.5小时,不计入数据库", Toast.LENGTH_SHORT).show();}
+        Toast.makeText(TabActivity2.this, "Sleep time is less than 0.5 hours, not counting sleep time statistics", Toast.LENGTH_SHORT).show();}
         db.close();
     }
 
@@ -181,7 +182,7 @@ public class TabActivity2 extends AppCompatActivity {
 
     private long getTimeMillis(String strTime) {
         long returnMillis = 0;
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm");
         Date d = null;
         try {
             d = sdf.parse(strTime);
@@ -202,8 +203,8 @@ public class TabActivity2 extends AppCompatActivity {
         long longHours = longExpend / (60 * 60 * 1000); //根据时间差来计算小时数
         long longMinutes = (longExpend - longHours * (60 * 60 * 1000)) / (60 * 1000);//根据时间差来计算分钟数
         long longSeconds=(longExpend-longHours*(60*60*1000)-longMinutes*(60*1000))/1000;//秒数
-        float min_to_hour=longMinutes/60;
-        float during_sstime=min_to_hour+longHours;
+        float min_to_hour= (float) (longMinutes/60.0);
+        float during_sstime= (float) (min_to_hour+longHours);
 
         return  during_sstime+"";
 //        return longHours + ":" + longMinutes + ":" + longSeconds;

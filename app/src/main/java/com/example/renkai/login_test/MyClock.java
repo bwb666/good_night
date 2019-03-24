@@ -37,7 +37,7 @@ public class MyClock extends AppCompatActivity {
     String show1String = null;
     String show2String = null;
     String show3String = null;
-    String defalutString = "目前无设置";
+    String defalutString = "Currently no settings";
     AlertDialog builder=null;
     Calendar c=Calendar.getInstance();
     private MediaPlayer mediaPlayer;
@@ -102,7 +102,7 @@ public class MyClock extends AppCompatActivity {
                                 editor.putString("TIME1", tmpS);
                                 editor.commit();
 
-                                Toast.makeText(MyClock.this,"设置闹钟时间为"+tmpS,
+                                Toast.makeText(MyClock.this,"Set the alarm time to"+tmpS,
                                         Toast.LENGTH_SHORT)
                                         .show();
                             }
@@ -121,13 +121,13 @@ public class MyClock extends AppCompatActivity {
                 AlarmManager am;
                 am =(AlarmManager)getSystemService(ALARM_SERVICE);
                 am.cancel(sender);
-                Toast.makeText(MyClock.this,"闹钟时间删除",
+                Toast.makeText(MyClock.this,"Delete the clock",
                         Toast.LENGTH_SHORT).show();
-                show1.setText("目前无设置");
+                show1.setText("Currently no settings");
 
                 SharedPreferences time1Share = getPreferences(0);
                 SharedPreferences.Editor editor = time1Share.edit();
-                editor.putString("TIME1", "目前无设置");
+                editor.putString("TIME1", "Currently no settings");
                 editor.commit();
             }
         });
@@ -174,7 +174,7 @@ public class MyClock extends AppCompatActivity {
                                 editor.putString("TIME1", tmpS);
                                 editor.commit();
 
-                                Toast.makeText(MyClock.this,"设置闹钟时间为"+tmpS,
+                                Toast.makeText(MyClock.this,"Set the alarm time to"+tmpS,
                                         Toast.LENGTH_SHORT)
                                         .show();
                             }
@@ -193,12 +193,12 @@ public class MyClock extends AppCompatActivity {
                 AlarmManager am;
                 am =(AlarmManager)getSystemService(ALARM_SERVICE);
                 am.cancel(sender);
-                Toast.makeText(MyClock.this,"闹钟时间删除", Toast.LENGTH_SHORT).show();
-                show2.setText("目前无设置");
+                Toast.makeText(MyClock.this,"Set the alarm time to", Toast.LENGTH_SHORT).show();
+                show2.setText("Currently no settings");
 
                 SharedPreferences time1Share = getPreferences(0);
                 SharedPreferences.Editor editor = time1Share.edit();
-                editor.putString("TIME1", "目前无设置");
+                editor.putString("TIME1", "Currently no settings");
                 editor.commit();
             }
         });
@@ -243,7 +243,7 @@ public class MyClock extends AppCompatActivity {
                                 editor.putString("TIME1", tmpS);
                                 editor.commit();
 
-                                Toast.makeText(MyClock.this,"设置闹钟时间为"+tmpS, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MyClock.this,"Set the alarm time to"+tmpS, Toast.LENGTH_SHORT).show();
                             }
                         },mHour,mMinute,true).show();
             }
@@ -260,13 +260,13 @@ public class MyClock extends AppCompatActivity {
                 AlarmManager am;
                 am =(AlarmManager)getSystemService(ALARM_SERVICE);
                 am.cancel(sender);
-                Toast.makeText(MyClock.this,"闹钟时间删除",
+                Toast.makeText(MyClock.this,"Set the alarm time to",
                         Toast.LENGTH_SHORT).show();
-                show3.setText("目前无设置");
+                show3.setText("Currently no settings");
 
                 SharedPreferences time1Share = getPreferences(0);
                 SharedPreferences.Editor editor = time1Share.edit();
-                editor.putString("TIME1", "目前无设置");
+                editor.putString("TIME1", "Currently no settings");
                 editor.commit();
             }
         });

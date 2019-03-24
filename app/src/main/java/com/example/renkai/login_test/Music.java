@@ -40,7 +40,7 @@ public class Music extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(Music.this, Gedan.class);
+                intent.setClass(Music.this, Gedan2.class);
                 startActivity(intent);
             }
         });
@@ -49,7 +49,7 @@ public class Music extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(Music.this, Gedan.class);
+                intent.setClass(Music.this, Gedan3.class);
                 startActivity(intent);
             }
         });
@@ -58,7 +58,7 @@ public class Music extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(Music.this, Gedan.class);
+                intent.setClass(Music.this, Gedan4.class);
                 startActivity(intent);
             }
         });
@@ -67,7 +67,7 @@ public class Music extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(Music.this, Gedan.class);
+                intent.setClass(Music.this, Gedan5.class);
                 startActivity(intent);
             }
         });
@@ -76,7 +76,7 @@ public class Music extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(Music.this, Gedan.class);
+                intent.setClass(Music.this, Gedan6.class);
                 startActivity(intent);
             }
         });

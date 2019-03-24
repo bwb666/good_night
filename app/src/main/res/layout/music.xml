@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="10dp"
-        android:text="音乐分类"
+        android:text="Song classification"
         android:textColor="@android:color/white"
         android:textSize="30sp"
         android:textStyle="bold" />
@@ -32,15 +32,24 @@
                 android:layout_height="120dp"
                 android:layout_weight="1"
                 android:layout_margin="15dp"
+                android:orientation="vertical"
                 android:background="@drawable/changfangxing">
 
 
                 <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="Natural sound"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"/>
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="音乐类型1"
-                    android:layout_gravity="center"
-                    android:layout_margin="10dp"/>
+                    android:textSize="20dp"
+                    android:text="8"
+                    android:layout_gravity="center" />
+
 
 
             </LinearLayout>
@@ -50,14 +59,24 @@
                 android:layout_height="120dp"
                 android:layout_weight="1"
                 android:layout_margin="15dp"
-                android:background="@drawable/changfangxing">
+                android:background="@drawable/changfangxing"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="音乐类型2"
+                    android:text="Meditation"
+                    android:textSize="20dp"
                     android:layout_gravity="center"
-                    android:layout_margin="10dp"/>
+                    android:layout_margin="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="4"
+                    android:layout_gravity="center"
+                    />
             </LinearLayout>
 
         </LinearLayout>
@@ -74,15 +93,24 @@
                 android:layout_height="120dp"
                 android:layout_weight="1"
                 android:layout_margin="15dp"
-                android:background="@drawable/changfangxing">
+                android:background="@drawable/changfangxing"
+                android:orientation="vertical">
 
 
                 <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="Deep sleeping"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    android:layout_margin="20dp"/>
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="音乐类型3"
+                    android:text="6"
+                    android:textSize="20dp"
                     android:layout_gravity="center"
-                    android:layout_margin="10dp"/>
+                    />
 
 
             </LinearLayout>
@@ -92,14 +120,23 @@
                 android:layout_height="120dp"
                 android:layout_weight="1"
                 android:layout_margin="15dp"
-                android:background="@drawable/changfangxing">
+                android:background="@drawable/changfangxing"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="音乐类型4"
+                    android:text="Piano piece"
+                    android:textSize="20dp"
                     android:layout_gravity="center"
-                    android:layout_margin="10dp"/>
+                    android:layout_margin="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -115,15 +152,26 @@
                 android:layout_height="120dp"
                 android:layout_weight="1"
                 android:layout_margin="15dp"
-                android:background="@drawable/changfangxing">
+                android:background="@drawable/changfangxing"
+                android:orientation="vertical">
 
 
                 <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="5 minutes to cure insomnia"
+                    android:layout_gravity="center"
+                    android:textSize="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="音乐类型5"
+                    android:layout_marginTop="10dp"
+                    android:text="7"
                     android:layout_gravity="center"
-                    android:layout_margin="10dp"/>
+                    android:textSize="20dp"/>
 
 
             </LinearLayout>
@@ -133,14 +181,23 @@
                 android:layout_height="120dp"
                 android:layout_weight="1"
                 android:layout_margin="15dp"
-                android:background="@drawable/changfangxing">
+                android:background="@drawable/changfangxing"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="Buddha song"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    android:layout_margin="20dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="音乐类型6"
+                    android:text="5"
                     android:layout_gravity="center"
-                    android:layout_margin="10dp"/>
+                    android:textSize="20dp"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

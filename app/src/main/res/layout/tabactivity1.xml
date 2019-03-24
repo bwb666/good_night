@@ -13,7 +13,7 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="130dp"
             android:layout_gravity="center"
             android:background="@drawable/tab1_bg1" />
@@ -132,11 +132,19 @@
         android:orientation="horizontal"
         android:weightSum="2">
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="190dp"
+            android:layout_height="85dp"
             android:layout_weight="1"
             android:layout_margin="10dp"
             android:background="@drawable/spic_1">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Improve happiness"
+                android:textColor="@color/white" />
 
 
             <ImageView
@@ -144,25 +152,30 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="140dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="18dp"
                 app:srcCompat="@drawable/bofang" />
 
 
         </LinearLayout>
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="190dp"
+            android:layout_height="85dp"
             android:layout_weight="1"
             android:layout_margin="10dp"
             android:background="@drawable/spic2">
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Relaxation hypnosis"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"/>
 
             <ImageView
                 android:id="@+id/bofang2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="140dp"
                 android:layout_marginTop="20dp"
                 app:srcCompat="@drawable/bofang" />
         </LinearLayout>
@@ -177,11 +190,19 @@
         android:orientation="horizontal"
         android:weightSum="2">
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="190dp"
+            android:layout_height="85dp"
             android:layout_weight="1"
             android:layout_margin="10dp"
             android:background="@drawable/spic_3">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Safety promotion exercise"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"/>
 
 
             <ImageView
@@ -189,26 +210,31 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="140dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="18dp"
                 app:srcCompat="@drawable/bofang" />
 
 
         </LinearLayout>
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="190dp"
+            android:layout_height="85dp"
             android:layout_weight="1"
             android:layout_margin="10dp"
             android:background="@drawable/spic_4">
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Zen of the mountain"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"/>
 
             <ImageView
                 android:id="@+id/bofang4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="140dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="18dp"
                 app:srcCompat="@drawable/bofang" />
         </LinearLayout>
 

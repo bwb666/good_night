@@ -1,5 +1,6 @@
 package com.example.renkai.login_test;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -25,7 +26,7 @@ public class Gedan extends AppCompatActivity {
     private SeekBar seekBar1;
     private MediaPlayer player;
     int cur = 0;
-    private int[] resList = new int[]{R.raw.sound1,R.raw.sound2,R.raw.sound3,R.raw.sound4,R.raw.sound5,R.raw.sound6,R.raw.sound7};
+    private int[] resList = new int[]{R.raw.class1_1,R.raw.class1_2,R.raw.class1_3,R.raw.class1_4,R.raw.class1_5,R.raw.class1_6,R.raw.class1_7,R.raw.class1_8};
 
     private List<Gequ> gequList = new ArrayList<Gequ>();
 
@@ -56,6 +57,7 @@ public class Gedan extends AppCompatActivity {
                             player.release();
                         }
                         player = MediaPlayer.create(Gedan.this,resList[cur]);
+                        seekBar1.setMax(player.getDuration());
                         player.start();
                         bofangOrzanting.setImageDrawable(getResources().getDrawable(R.drawable.stop));
                         handler.post(updateThread);
@@ -67,6 +69,7 @@ public class Gedan extends AppCompatActivity {
                             player.release();
                         }
                         player = MediaPlayer.create(Gedan.this,resList[cur]);
+                        seekBar1.setMax(player.getDuration());
                         player.start();
                         bofangOrzanting.setImageDrawable(getResources().getDrawable(R.drawable.stop));
                         handler.post(updateThread);
@@ -78,6 +81,7 @@ public class Gedan extends AppCompatActivity {
                             player.release();
                         }
                         player = MediaPlayer.create(Gedan.this,resList[cur]);
+                        seekBar1.setMax(player.getDuration());
                         player.start();
                         bofangOrzanting.setImageDrawable(getResources().getDrawable(R.drawable.stop));
                         handler.post(updateThread);
@@ -89,6 +93,7 @@ public class Gedan extends AppCompatActivity {
                             player.release();
                         }
                         player = MediaPlayer.create(Gedan.this,resList[cur]);
+                        seekBar1.setMax(player.getDuration());
                         player.start();
                         bofangOrzanting.setImageDrawable(getResources().getDrawable(R.drawable.stop));
                         handler.post(updateThread);
@@ -100,6 +105,7 @@ public class Gedan extends AppCompatActivity {
                             player.release();
                         }
                         player = MediaPlayer.create(Gedan.this,resList[cur]);
+                        seekBar1.setMax(player.getDuration());
                         player.start();
                         bofangOrzanting.setImageDrawable(getResources().getDrawable(R.drawable.stop));
                         handler.post(updateThread);
@@ -110,6 +116,7 @@ public class Gedan extends AppCompatActivity {
                             player.release();
                         }
                         player = MediaPlayer.create(Gedan.this,resList[cur]);
+                        seekBar1.setMax(player.getDuration());
                         player.start();
                         bofangOrzanting.setImageDrawable(getResources().getDrawable(R.drawable.stop));
                         handler.post(updateThread);
@@ -120,6 +127,18 @@ public class Gedan extends AppCompatActivity {
                             player.release();
                         }
                         player = MediaPlayer.create(Gedan.this,resList[cur]);
+                        seekBar1.setMax(player.getDuration());
+                        player.start();
+                        bofangOrzanting.setImageDrawable(getResources().getDrawable(R.drawable.stop));
+                        handler.post(updateThread);
+                        break;
+                    case 7:
+                        cur=7;
+                        if(player != null){
+                            player.release();
+                        }
+                        player = MediaPlayer.create(Gedan.this,resList[cur]);
+                        seekBar1.setMax(player.getDuration());
                         player.start();
                         bofangOrzanting.setImageDrawable(getResources().getDrawable(R.drawable.stop));
                         handler.post(updateThread);
@@ -133,6 +152,7 @@ public class Gedan extends AppCompatActivity {
     private void init() {
 //        player = MediaPlayer.create(this, R.raw.sound1);
         player = MediaPlayer.create(Gedan.this,resList[cur]);
+//        player.setLooping(true);
     }
 
     private void findView() {
@@ -197,7 +217,7 @@ public class Gedan extends AppCompatActivity {
         last.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cur = (cur + 6)%resList.length;
+                cur = (cur + 7)%resList.length;
                 if(player != null){
                     player.release();
                 }
@@ -229,34 +249,37 @@ public class Gedan extends AppCompatActivity {
     }
 
     private void initGedan() {
-        Gequ song1 = new Gequ("song1",1);
+        Gequ song1 = new Gequ("Rain outside the window",1);
         gequList.add(song1);
-        Gequ song2 = new Gequ("song2",2);
+        Gequ song2 = new Gequ("Frog sound in lotus pond",2);
         gequList.add(song2);
-        Gequ song3 = new Gequ("song3",3);
+        Gequ song3 = new Gequ("Thunderstorm",3);
         gequList.add(song3);
-        Gequ song4 = new Gequ("song4",4);
+        Gequ song4 = new Gequ("Waves and seagulls",4);
         gequList.add(song4);
-        Gequ song5 = new Gequ("song5",5);
+        Gequ song5 = new Gequ("Mountain stream",5);
         gequList.add(song5);
-        Gequ song6 = new Gequ("song6",6);
+        Gequ song6 = new Gequ("Birdsong in the jungle",6);
         gequList.add(song6);
-        Gequ song7 = new Gequ("song7",7);
+        Gequ song7 = new Gequ("Cave water drop",7);
         gequList.add(song7);
+        Gequ song8 = new Gequ("Waterfalls and cicadas",8);
+        gequList.add(song8);
 
     }
 
-//    private void initGedan2() {
-//        Gequ song1 = new Gequ("song1",1);
-//        gequList.add(song1);
-//        Gequ song2 = new Gequ("song2",2);
-//        gequList.add(song2);
-//        Gequ song3 = new Gequ("song3",3);
-//        gequList.add(song3);
-//        Gequ song4 = new Gequ("song4",4);
-//        gequList.add(song4);
-//
-//    }
+    public void finish() {
+        // TODO Auto-generated method stub
+        if(player.isPlaying()){
+            player.stop();
+        }
+        player.release();//释放资源
+//        Intent intent = new Intent();
+//        intent.setClass(Gedan.this, Music.class);
+//        startActivity(intent);
+    }
+
+
 
 
 

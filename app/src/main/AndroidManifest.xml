@@ -6,9 +6,9 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/good_night"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/good_night"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <receiver android:name=".CallAlarm" android:process=".remote"></receiver>
@@ -20,7 +20,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".UsersInfo_activity"/>
-        <activity android:name=".ForgotInfo_activity"/>
         <activity android:name=".Register_Activity"/>
         <activity android:name=".after_login"/>
         <activity android:name=".TabActivity1"/>
@@ -30,6 +29,11 @@
         <activity android:name=".MyClock"/>
         <activity android:name=".AlarmAlert" />
         <activity android:name=".Mystati" />
+        <activity android:name=".Gedan2" />
+        <activity android:name=".Gedan3" />
+        <activity android:name=".Gedan4" />
+        <activity android:name=".Gedan5" />
+        <activity android:name=".Gedan6" />
     </application>
 
 </manifest>

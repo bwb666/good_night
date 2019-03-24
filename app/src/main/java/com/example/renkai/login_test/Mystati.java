@@ -32,7 +32,7 @@ public class Mystati extends AppCompatActivity {
 
         lineChart1 = (LineChart) findViewById(R.id.spread_line_chart);
         //设置图表的描述
-        lineChart1.setDescription("hhhhhh");
+        lineChart1.setDescription("Start sleep time");
         //设置x轴的数据
         int numX = 7;
         String[] riqi={"","","","","","",""};
@@ -50,7 +50,7 @@ public class Mystati extends AppCompatActivity {
                 String date = cursor.getString(cursor.getColumnIndex("riqi"));
                 String sleeptime= cursor.getString(cursor.getColumnIndex("sleeptime"));
                 Log.i("debug", "id:" + id + "入睡时间:" + date + "睡眠时长:" + sleeptime );
-                riqi[i]=date.substring(6,11);
+                riqi[i]=date.substring(6,16);
                 datas1[i++]= Float.parseFloat(sleeptime);
             } while (cursor.moveToNext());
         }
@@ -61,7 +61,7 @@ public class Mystati extends AppCompatActivity {
 
 
         //设置折线的名称
-        LineChartManager2.setLineName("睡眠时长");
+        LineChartManager2.setLineName("sleep time");
         //创建两条折线的图表
         lineData = LineChartManager2.initSingleLineChart(this, lineChart1, numX, datas1,riqi);
         LineChartManager2.initDataStyle(lineChart1, lineData, this);

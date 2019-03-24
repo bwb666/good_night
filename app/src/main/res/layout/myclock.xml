@@ -16,7 +16,7 @@
     <TextView
         android:id="@+id/clock1"
         android:layout_marginTop="55dp"
-        android:text="闹钟一"
+        android:text="Clock 1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#bfbfbf"
@@ -26,24 +26,24 @@
         android:id="@+id/settime1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="设置闹钟"
-        android:textColor="#ffffff"
-        android:background="@drawable/clock_btn"
-        android:layout_marginTop="45dp"
-        android:textSize="18sp"
-        android:layout_marginRight="85dp"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="85dp" />
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/clock_btn"
+        android:text="Set"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/show1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:textSize="25sp"
+        android:textSize="20dp"
         android:layout_below="@id/settime1"
-        android:text="目前无设置"
+        android:text="Currently no settings"
         android:textColor="#e6e6e6"/>
 
     <Button
@@ -51,46 +51,47 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_below="@+id/settime1"
-        android:layout_marginRight="85dp"
-        android:layout_alignParentRight="true"
-        android:textSize="18sp"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/clock_btn"
-        android:text="删除闹钟"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="85dp" />
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/clock_btn"
+        android:text="Delete"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/clock2"
         android:layout_marginTop="200dp"
-        android:text="闹钟二"
+        android:text="Clock 2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#bfbfbf"
         android:textSize="25sp"/>
+
     <Button
         android:id="@+id/settime2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="设置闹钟"
-        android:textColor="@android:color/white"
-        android:background="@drawable/clock_btn"
-        android:textSize="18sp"
-        android:layout_marginTop="190dp"
-        android:layout_marginRight="85dp"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="85dp" />
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="190dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/clock_btn"
+        android:text="Set"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/show2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:textSize="25sp"
+        android:textSize="20dp"
         android:layout_below="@id/settime2"
-        android:text="目前未设置"
+        android:text="Currently no settings"
         android:textColor="#e6e6e6"/>
 
     <Button
@@ -98,20 +99,20 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_below="@+id/settime2"
-        android:layout_marginRight="85dp"
-        android:layout_alignParentRight="true"
-        android:textSize="18sp"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/clock_btn"
-        android:text="删除闹钟"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="85dp" />
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/clock_btn"
+        android:text="Delete"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/clock3"
         android:layout_marginTop="360dp"
-        android:text="闹钟三"
+        android:text="Clock 3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#bfbfbf"
@@ -121,24 +122,24 @@
         android:id="@+id/settime3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="设置闹钟"
-        android:textColor="@android:color/white"
-        android:background="@drawable/clock_btn"
-        android:layout_marginTop="350dp"
-        android:textSize="18sp"
-        android:layout_marginRight="85dp"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="85dp" />
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/clock_btn"
+        android:text="Set"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/show3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:textSize="25sp"
+        android:textSize="20dp"
         android:layout_below="@id/settime3"
-        android:text="目前未设置"
+        android:text="Currently no settings"
         android:textColor="#e6e6e6"/>
 
     <Button
@@ -146,13 +147,13 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_below="@+id/settime3"
-        android:layout_marginRight="85dp"
-        android:layout_alignParentRight="true"
-        android:textSize="18sp"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/clock_btn"
-        android:text="删除闹钟"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="85dp" />
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/clock_btn"
+        android:text="Delete"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
 </RelativeLayout>

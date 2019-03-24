@@ -13,11 +13,12 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="20dp"
-        android:text="统计一周睡眠时间"/>
+        android:text="Last 7 statistics"/>
 
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/spread_line_chart"
         android:layout_width="match_parent"
+        android:layout_margin="10dp"
         android:layout_height="280dp" />
 
 </LinearLayout>

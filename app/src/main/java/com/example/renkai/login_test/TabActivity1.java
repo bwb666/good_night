@@ -39,10 +39,13 @@ public class TabActivity1 extends AppCompatActivity {
         bofang3=(ImageView)findViewById(R.id.bofang3) ;
         bofang4=(ImageView)findViewById(R.id.bofang4) ;
 
-        mp1=MediaPlayer.create(TabActivity1.this, R.raw.sound1);
-        player=MediaPlayer.create(TabActivity1.this, R.raw.sound2);//设置要播放的音频
-        player1=MediaPlayer.create(TabActivity1.this, R.raw.sound3);
-        player2=MediaPlayer.create(TabActivity1.this, R.raw.sound4);
+        mp1=MediaPlayer.create(TabActivity1.this, R.raw.shouye1);
+        player=MediaPlayer.create(TabActivity1.this, R.raw.shouye2);//设置要播放的音频
+        player1=MediaPlayer.create(TabActivity1.this, R.raw.shouye3);
+        player2=MediaPlayer.create(TabActivity1.this, R.raw.shouye4);
+        player.setLooping(true);
+        player1.setLooping(true);
+        player2.setLooping(true);
 
         try{mp1.prepare();}catch(Exception e){e.printStackTrace();}
 
@@ -99,7 +102,7 @@ public class TabActivity1 extends AppCompatActivity {
             @Override
             public void onClick(View arg0){
                 if(player==null){//如果没有歌
-                    player = MediaPlayer.create(TabActivity1.this, R.raw.sound2);
+                    player = MediaPlayer.create(TabActivity1.this, R.raw.shouye2);
                     player.start();
                     bofang2.setImageDrawable(getResources().getDrawable(R.drawable.tingzhi));
                      }
@@ -122,7 +125,7 @@ public class TabActivity1 extends AppCompatActivity {
             @Override
             public void onClick(View arg0){
                 if(player1==null){//如果没有歌
-                    player1 = MediaPlayer.create(TabActivity1.this, R.raw.sound3);
+                    player1 = MediaPlayer.create(TabActivity1.this, R.raw.shouye3);
                     player1.start();
                     bofang3.setImageDrawable(getResources().getDrawable(R.drawable.tingzhi));
                 }
@@ -145,7 +148,7 @@ public class TabActivity1 extends AppCompatActivity {
             @Override
             public void onClick(View arg0){
                 if(player2==null){//如果没有歌
-                    player2 = MediaPlayer.create(TabActivity1.this, R.raw.sound4);
+                    player2 = MediaPlayer.create(TabActivity1.this, R.raw.shouye4);
                     player2.start();
                     bofang4.setImageDrawable(getResources().getDrawable(R.drawable.tingzhi));
                 }

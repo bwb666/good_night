@@ -15,9 +15,7 @@ import com.github.mikephil.charting.data.LineDataSet;
 
 import java.util.ArrayList;
 
-/**
- * Created by Administrator on 2017/3/27 0027.
- */
+
 public class LineChartManager2 {
 
     private static String lineName = null;
@@ -36,7 +34,7 @@ public class LineChartManager2 {
         ArrayList<String> xValues = new ArrayList<String>();
         for (int i = 0; i < count; i++) {
             // x轴显示的数据，这里默认使用数字下标显示
-            xValues.add(riqis[i] );//你想怎么改啊就是把X轴的坐标换成我前面数据库里的第一个数据的日期不加时间
+            xValues.add(riqis[i] );//
         }
 
         // y轴的数据
@@ -137,6 +135,7 @@ public class LineChartManager2 {
 //        mLineChart.setMarkerView(mv);
         lineChart.setDrawBorders(false); //在折线图上添加边框
         //lineChart.setDescription("时间/数据"); //数据描述
+        lineChart.setDescriptionColor(Color.WHITE);
         lineChart.setDrawGridBackground(false); //表格颜色
         lineChart.setGridBackgroundColor(Color.GRAY & 0x70FFFFFF); //表格的颜色，设置一个透明度
         lineChart.setTouchEnabled(true); //可点击
@@ -149,13 +148,13 @@ public class LineChartManager2 {
 
         Legend mLegend = lineChart.getLegend(); //设置标示，就是那个一组y的value的
         mLegend.setForm(Legend.LegendForm.SQUARE); //样式
-        mLegend.setFormSize(6f); //字体
+        mLegend.setFormSize(5f); //字体
         mLegend.setTextColor(Color.WHITE); //颜色
         lineChart.setVisibleXRange(0, 4);   //x轴可显示的坐标范围
         XAxis xAxis = lineChart.getXAxis();  //x轴的标示
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM); //x轴位置
         xAxis.setTextColor(Color.WHITE);    //字体的颜色
-        xAxis.setTextSize(10f); //字体大小
+        xAxis.setTextSize(6f); //字体大小
         xAxis.setGridColor(Color.GRAY);//网格线颜色
         xAxis.setDrawGridLines(false); //不显示网格线
         YAxis axisLeft = lineChart.getAxisLeft(); //y轴左边标示
@@ -163,7 +162,7 @@ public class LineChartManager2 {
         axisLeft.setTextColor(Color.WHITE); //字体颜色
         axisLeft.setTextSize(10f); //字体大小
         //axisLeft.setAxisMaxValue(800f); //最大值
-        axisLeft.setLabelCount(5, true); //显示格数
+        axisLeft.setLabelCount(4, true); //显示格数
         axisLeft.setGridColor(Color.GRAY); //网格线颜色
 
         axisRight.setDrawAxisLine(false);
