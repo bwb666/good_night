@@ -106,7 +106,7 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
             case R.id.btn_login:
                 if (edit_account.getText().toString().trim().equals("") | edit_password.getText().
                         toString().trim().equals("")) {
-                    Toast.makeText(this, "请输入账号或者注册账号！", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Please enter an account or sign up!", Toast.LENGTH_SHORT).show();
                 } else {
                     readUserInfo();
                 }
@@ -152,12 +152,12 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
     protected void readUserInfo() {
         if (login(edit_account.getText().toString(), edit_password.getText().toString())) {
             saveUsersInfo();
-            Toast.makeText(this, "登陆成功！", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "登陆成功！", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(Login_Activity.this, after_login.class);
             intent.putExtra("Username",edit_account.getText().toString());
             startActivity(intent);
         } else {
-            Toast.makeText(this, "账户或密码错误，请重新输入！！", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "The account or password is incorrect, please enter again！！", Toast.LENGTH_SHORT).show();
         }
     }
 

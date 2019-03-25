@@ -1,5 +1,6 @@
 package com.example.renkai.login_test;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -21,9 +22,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-/**
- * Created by renkai on 17/7/7.
- */
 
 public class Register_Activity extends Activity implements View.OnClickListener {
 
@@ -51,7 +49,7 @@ public class Register_Activity extends Activity implements View.OnClickListener 
                         for (int i = start; i < end; i++) {
                             if (!Character.isLetterOrDigit(source.charAt(i)) &&
                                     !Character.toString(source.charAt(i)).equals("_")) {
-                                Toast.makeText(Register_Activity.this, "只能使用'_'、字母、数字、汉字注册！", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Register_Activity.this, "Only use '_', letters, numbers, Chinese characters to sign up!", Toast.LENGTH_SHORT).show();
                                 return "";
                             }
                         }
@@ -86,7 +84,7 @@ public class Register_Activity extends Activity implements View.OnClickListener 
                                 (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
                         imm.hideSoftInputFromWindow(edit_setpassword.getWindowToken(), 0);
                     } else {
-                        Toast.makeText(Register_Activity.this, "密码设置最少为6位！", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Register_Activity.this, "The password setting is at least 6 digits!", Toast.LENGTH_SHORT).show();
                     }
                 }
                 return false;
@@ -116,18 +114,18 @@ public class Register_Activity extends Activity implements View.OnClickListener 
         switch (v.getId()) {
             case R.id.btn_yes:
                 if (CheckIsDataAlreadyInDBorNot(edit_register.getText().toString())) {
-                    Toast.makeText(this, "该用户名已被注册，注册失败", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "The username has been registered and the registration failed.", Toast.LENGTH_SHORT).show();
                 } else {
                     if (edit_setpassword.getText().toString().trim().
                             equals(edit_resetpassword.getText().toString())) {
                         registerUserInfo(edit_register.getText().toString(),
                                 edit_setpassword.getText().toString());
-                        Toast.makeText(this, "注册成功！", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "Sign up successfully！", Toast.LENGTH_SHORT).show();
                         Intent register_intent = new Intent(Register_Activity.this,
                                 Login_Activity.class);
                         startActivity(register_intent);
                     } else {
-                        Toast.makeText(this, "两次输入密码不同，请重新输入！",
+                        Toast.makeText(this, "Enter the password twice differently ,so please enter again！",
                                 Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -146,7 +144,7 @@ public class Register_Activity extends Activity implements View.OnClickListener 
      * 利用SharedPreferences进行默认登陆设置
      */
     private void saveUsersInfo() {
-        SharedPreferences sharedPreferences = getSharedPreferences("UsersInfo", MODE_APPEND);
+        @SuppressLint("WrongConstant") SharedPreferences sharedPreferences = getSharedPreferences("UsersInfo", MODE_APPEND);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("username", edit_register.getText().toString());
         //判断注册时的两次密码是否相同
