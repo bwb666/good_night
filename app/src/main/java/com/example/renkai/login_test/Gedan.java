@@ -47,6 +47,7 @@ public class Gedan extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.listview);
         listView.setAdapter(adapter);
 
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -268,15 +269,19 @@ public class Gedan extends AppCompatActivity {
 
     }
 
+
     public void finish() {
         // TODO Auto-generated method stub
         if(player.isPlaying()){
             player.stop();
+//            player.reset();
+//            player.release();
         }
-        player.release();//释放资源
+       //释放资源
 //        Intent intent = new Intent();
 //        intent.setClass(Gedan.this, Music.class);
 //        startActivity(intent);
+        super.finish();
     }
 
 

@@ -236,10 +236,11 @@ public class Gedan6 extends AppCompatActivity {
         if(player.isPlaying()){
             player.stop();
         }
-        player.release();//释放资源
+//        player.release();//释放资源
 //        Intent intent = new Intent();
 //        intent.setClass(Gedan6.this, Music.class);
 //        startActivity(intent);
+        super.finish();
     }
 
 

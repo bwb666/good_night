@@ -223,10 +223,11 @@ public class Gedan2 extends AppCompatActivity {
         if(player.isPlaying()){
             player.stop();
         }
-        player.release();//释放资源
+//        player.release();//释放资源
 //        Intent intent = new Intent();
 //        intent.setClass(Gedan2.this, Music.class);
 //        startActivity(intent);
+        super.finish();
     }
 
 

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 public class Music extends AppCompatActivity {
@@ -25,6 +26,9 @@ public class Music extends AppCompatActivity {
         linearLayout4= (LinearLayout) findViewById(R.id.yylx4);
         linearLayout5= (LinearLayout) findViewById(R.id.yylx5);
         linearLayout6= (LinearLayout) findViewById(R.id.yylx6);
+
+
+
 
 
         linearLayout1.setOnClickListener(new View.OnClickListener() {
@@ -81,4 +85,5 @@ public class Music extends AppCompatActivity {
             }
         });
     }
+
 }
