@@ -207,7 +207,6 @@ public class TabActivity2 extends AppCompatActivity {
         float during_sstime= (float) (min_to_hour+longHours);
 
         return  during_sstime+"";
-//        return longHours + ":" + longMinutes + ":" + longSeconds;
     }
 
 

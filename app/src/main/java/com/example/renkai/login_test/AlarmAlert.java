@@ -18,9 +18,9 @@ public class AlarmAlert extends Activity {
         mediaPlayer.start();
         new AlertDialog.Builder(AlarmAlert.this)
                 .setIcon(R.drawable.clock)
-                .setTitle("闹钟响了")
-                .setMessage("时间到了！")
-                .setPositiveButton("关掉"
+                .setTitle("Alert rings！")
+                .setMessage("Time is up！")
+                .setPositiveButton("Close"
                         , new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
