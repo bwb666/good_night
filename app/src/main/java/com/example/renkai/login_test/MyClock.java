@@ -193,7 +193,7 @@ public class MyClock extends AppCompatActivity {
                 AlarmManager am;
                 am =(AlarmManager)getSystemService(ALARM_SERVICE);
                 am.cancel(sender);
-                Toast.makeText(MyClock.this,"Set the alarm time to", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MyClock.this,"Delete the clock", Toast.LENGTH_SHORT).show();
                 show2.setText("Currently no settings");
 
                 SharedPreferences time1Share = getPreferences(0);
@@ -260,7 +260,7 @@ public class MyClock extends AppCompatActivity {
                 AlarmManager am;
                 am =(AlarmManager)getSystemService(ALARM_SERVICE);
                 am.cancel(sender);
-                Toast.makeText(MyClock.this,"Set the alarm time to",
+                Toast.makeText(MyClock.this,"Delete the clock",
                         Toast.LENGTH_SHORT).show();
                 show3.setText("Currently no settings");
 

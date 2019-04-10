@@ -119,11 +119,11 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
                 if (flag == true) {//不可见
                     edit_password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
                     flag = false;
-                    openpwd.setBackgroundResource(R.drawable.invisible);
+                    openpwd.setBackgroundResource(R.drawable.visible);
                 } else {
                     edit_password.setTransformationMethod(PasswordTransformationMethod.getInstance());
                     flag = true;
-                    openpwd.setBackgroundResource(R.drawable.visible);
+                    openpwd.setBackgroundResource(R.drawable.invisible);
                 }
                 break;
 //            case R.id.remember:
